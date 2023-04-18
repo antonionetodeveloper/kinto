@@ -1,5 +1,4 @@
 import "@/style/globals.css"
-import Head from "next/head"
 
 export const metadata = {
    title: "Create Next App",
@@ -13,13 +12,9 @@ interface LayoutProps {
 export default function RootLayout({ children }: LayoutProps) {
    return (
       <html lang="pt-BR">
-         <Head>
-            <meta
-               http-equiv="Content-Security-Policy"
-               content="upgrade-insecure-requests"
-            />
+         <head>
             <title>Kintó</title>
-         </Head>
+         </head>
          <body>{children}</body>
       </html>
    )

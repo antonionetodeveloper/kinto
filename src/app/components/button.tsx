@@ -10,25 +10,24 @@ interface ButtonProps {
 const Button = ({ content, pressed }: ButtonProps) => {
    const url = "http://192.168.133.124"
 
-   switch (pressed) {
-      case "W":
-         axios.get(url + "/car/move/foward")
-         break
-      case "A":
-         axios.get(url + "/car/move/left")
-         break
-      case "S":
-         axios.get(url + "/car/move/backward")
-         break
-      case "D":
-         axios.get(url + "/car/move/right")
-         break
-      case "":
-         axios.get(url + "/car/move/stop")
-         break
-      default:
-         break
+   const handlePress = async () => {
+      switch (pressed) {
+         case "W":
+            return await axios.get(url + "/car/move/foward")
+         case "A":
+            return await axios.get(url + "/car/move/left")
+         case "S":
+            return await axios.get(url + "/car/move/backward")
+         case "D":
+            return await axios.get(url + "/car/move/right")
+         case " ":
+            return await axios.get(url + "/car/stop")
+
+         default:
+            break
+      }
    }
+   handlePress()
 
    return (
       <button

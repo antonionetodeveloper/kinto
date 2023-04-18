@@ -1,7 +1,6 @@
 "use client"
 
 import { KeyboardEvent, useState } from "react"
-
 import Button from "./components/button"
 
 export default function Home() {
