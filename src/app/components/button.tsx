@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 const Button = ({ content, pressed }: ButtonProps) => {
-   const url = "http://192.168.133.124"
+   const url = "http://192.168.10.124"
 
    const handlePress = async () => {
       switch (pressed) {
@@ -32,7 +32,7 @@ const Button = ({ content, pressed }: ButtonProps) => {
    return (
       <button
          className={`bg-green-500 hover:cursor-auto rounded-full w-32 h-32 text-6xl text-white focus:outline-none ${
-            pressed === content ? "bg-green-600" : ""
+            pressed === content ? "bg-green-800" : ""
          }`}
       >
          {content}
